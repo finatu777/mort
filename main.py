@@ -7,7 +7,7 @@ BLACK = (255,255,255)
 WHITE = (255, 255, 255)
 WIDTH = 800
 HEIGHT = 300
-FPS = 3
+FPS = 30
 
 
 
@@ -23,8 +23,9 @@ class Game:
         pygame.display.set_caption('FIGHTER')
         # Players
         self.player = player.Player(120, 85, 'player', 'scorpion_red_sprites', flip=False)
+        self.enemy = player.Player(620, 85, 'player', 'scorpion_red_sprites', flip=True)
         self.all_sprite_list = pygame.sprite.Group()
-        self.all_sprite_list.add(self.player)
+        self.all_sprite_list.add(self.player,self.enemy)
 
     def run(self):
         done = False
@@ -64,3 +65,4 @@ class Game:
 
 game = Game()
 game.run()
+
