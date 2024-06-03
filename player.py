@@ -105,3 +105,4 @@ class Player(pygame.sprite.Sprite):
     def stop(self):
         self.change_x = 0
 
+    
